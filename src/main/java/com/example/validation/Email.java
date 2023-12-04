@@ -1,10 +1,9 @@
 package com.example.validation;
 
+import io.micronaut.validation.validator.constraints.EmailValidator;
 import jakarta.validation.Constraint;
-import jakarta.validation.Payload;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -16,10 +15,10 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.ElementType.TYPE_USE;
 
-@Documented
-@Constraint(validatedBy = {})
-@Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
+@Target({METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE})
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Constraint(validatedBy = {EmailConstraintValidator.class })
 public @interface Email {
 
 
@@ -34,3 +33,5 @@ public @interface Email {
     Class<?>[] groups() default {};
 
 }
+
+
