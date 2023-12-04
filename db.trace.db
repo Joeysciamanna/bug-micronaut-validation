@@ -1,0 +1,12 @@
+2023-11-07 07:17:54.210119+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into [*]User (email,id) values (?,default)"; erwartet "identifier"
+Syntax error in SQL statement "insert into [*]User (email,id) values (?,default)"; expected "identifier"; SQL statement:
+insert into User (email,id) values (?,default) [42001-224]
+2023-11-07 07:19:24.404336+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "insert into [*]User (email,id) values (?,?)"; erwartet "identifier"
+Syntax error in SQL statement "insert into [*]User (email,id) values (?,?)"; expected "identifier"; SQL statement:
+insert into User (email,id) values (?,?) [42001-224]
+2023-11-21 11:05:53.315939+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabelle "user" nicht gefunden (diese Datenbank ist leer)
+Table "user" not found (this database is empty); SQL statement:
+insert into "user" ("email","id") values (?,?) [42104-224]
